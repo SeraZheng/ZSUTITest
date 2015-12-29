@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cIH-3I-uPe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cIH-3I-uPe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--ZSUTITest-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="siJ-uG-jns"/>
+                        <viewControllerLayoutGuide type="bottom" id="KIn-lB-vPN"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="276" affinity="minY"/>
+                        </userGuides>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZSUTITestDemo" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cle-O3-Z3U">
-                                <rect key="frame" x="0.0" y="250" width="320" height="67"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZSUTITest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j0-5G-v7E">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Lki-hS-2sn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launcher" translatesAutoresizingMaskIntoConstraints="NO" id="rYy-r1-EWW">
+                                <rect key="frame" x="20" y="80" width="560" height="466"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0j0-5G-v7E" secondAttribute="trailing" constant="-20" id="Lcd-uv-t90"/>
+                            <constraint firstItem="rYy-r1-EWW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oyd-e8-FlN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rYy-r1-EWW" secondAttribute="trailing" id="Q4Z-58-k74"/>
+                            <constraint firstItem="KIn-lB-vPN" firstAttribute="top" secondItem="0j0-5G-v7E" secondAttribute="bottom" id="Wek-yN-VF6"/>
+                            <constraint firstItem="rYy-r1-EWW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="ke9-Ew-9dV"/>
+                            <constraint firstItem="0j0-5G-v7E" firstAttribute="top" secondItem="rYy-r1-EWW" secondAttribute="bottom" constant="10" id="oKs-Qm-jLy"/>
+                            <constraint firstItem="0j0-5G-v7E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s5y-F7-Efa"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="wvr-Zf-r19"/>
+                    <navigationItem key="navigationItem" title="ZSUTITest" id="wvr-Zf-r19"/>
                     <connections>
-                        <outlet property="label" destination="cle-O3-Z3U" id="uoa-GC-gMM"/>
+                        <outlet property="imageView" destination="rYy-r1-EWW" id="K0L-Jo-mRI"/>
+                        <outlet property="label" destination="0j0-5G-v7E" id="03Q-sq-pcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="392"/>
+            <point key="canvasLocation" x="1170" y="401"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGY-ue-7nr">
@@ -54,7 +78,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acM-FU-Kvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.33333333333334" y="1017.6666666666666"/>
+            <point key="canvasLocation" x="340" y="1074.9999999999995"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launcher" width="211" height="220"/>
+    </resources>
 </document>
